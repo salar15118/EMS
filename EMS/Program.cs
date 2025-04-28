@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<EcommerceManagementSystem>(options =>
+builder.Services.AddDbContext<EcommerceManagementSystemContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("db")));
 
 var app = builder.Build();
